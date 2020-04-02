@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="sk">
+  <head>
+    <link rel="stylesheet" type="text/css" href="articles2.css" />
+    <!--  <meta http-equiv="content-type" content="text/html; charset=UTF-8"> -->
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=3, user-scalable=yes, minimal-ui"
+    />
+    <!--     <meta  charset="UTF-8" content="width=device-width, initial-scale=1.0"> -->
+    <title>KÃ¡va</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="nadpis">
+        <a class="nadpis_txt" href="articles_index.html">coffee</a>
+      </div>
+      <!--
+    <div style="width: 30%; float: left;">
+        <img src="img/kava1.png"  style="width: 100%">
+    </div>
+  -->
+    </div>
+
+    <hr class="line1" />
+    <div class="pomoc">
+      <div class="nav">
+        <div class="nav_img">
+          <img src="img/asd2.jpg" alt="" class="menu_img1" />
+          <img src="img/asd.jpg" alt="" class="menu_img2" />
+        </div>
+        <dl>
+          <dt class="menu_dt"></dt>
+          <dd class="menu_dd">
+            <a href="article1.html" class="menu">Arabika</a>
+          </dd>
+          <dd class="menu_dd">
+            <a href="article1_bs.html" class="menu">Arabika - Bootstrap</a>
+          </dd>
+          <dd class="menu_dd">
+            <a href="article2.html" class="menu">Robusta</a>
+          </dd>
+          <dd class="menu_dd">
+            <a href="articles_index.html" class="menu">O nÃ¡s</a>
+          </dd>
+          <dd class="menu_dd">
+            <a href="form_spokojnost.html" class="menu"
+              >FormulÃ¡r spokojnosti</a
+            >
+          </dd>
+        </dl>
+      </div>
+
+      <div class="article">
+        <div class="formular_div">
+          <a class="article_podnadpis">FormulÃ¡r spokojnosti</a><br /><br />
+
+          <form id="spokojnost">
+            <div class="formular_div2">
+              <input
+                type="text"
+                id="meno"
+                name="meno"
+                class="form_text"
+                required
+              />
+              <label for="meno" class="form_label">Meno:</label>
+            </div>
+
+            <div class="formular_div2">
+              <input
+                type="text"
+                id="priezvisko"
+                name="priezvisko"
+                class="form_text"
+                required
+              />
+              <label for="priezvisko" class="form_label_2">Priezvisko:</label>
+            </div>
+
+            <div class="formular_div2">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form_text"
+                required
+              />
+              <label for="email" class="form_label">Email:</label>
+            </div>
+
+            <div class="formular_div2 radio_div">
+              <p class="form_radio_n">Pohlavie:</p>
+              <label for="muz" class="form_radio_label"
+                >MuÅ¾
+                <input
+                  type="radio"
+                  id="muz"
+                  name="pohlavie"
+                  value="muz"
+                  class="form_radio"
+                />
+                <span class="checkmark"></span>
+              </label>
+              <br />
+              <label for="zena" class="form_radio_label"
+                >Å½ena
+                <input
+                  type="radio"
+                  id="zena"
+                  name="pohlavie"
+                  value="zena"
+                  class="form_radio"
+                />
+                <span class="checkmark"></span>
+              </label>
+            </div>
+
+            <div class="formular_div2 check_div">
+              <p class="form_check_n">PreferovanÃ½ druh kÃ¡vy:</p>
+              <label for="arabika" class="form_check_label"
+                >Arabika
+                <input
+                  type="checkbox"
+                  id="arabika"
+                  name="arabika"
+                  value="arabika"
+                  class="form_check"
+                />
+                <span class="checkmark_ch"></span>
+              </label>
+              <br />
+              <label for="robusta" class="form_check_label"
+                >Robusta
+                <input
+                  type="checkbox"
+                  id="robusta"
+                  name="robusta"
+                  value="robusta"
+                  class="form_check"
+                />
+                <span class="checkmark_ch"></span>
+              </label>
+              <br />
+              <label for="ine" class="form_check_label"
+                >InÃ©...
+                <input
+                  type="checkbox"
+                  id="ine"
+                  name="ine"
+                  value="ine"
+                  class="form_check"
+                />
+                <span class="checkmark_ch"></span>
+              </label>
+            </div>
+
+            <div class="formular_div2">
+              <textarea
+                id="text_a_form"
+                rows="4"
+                cols="50"
+                name="comment"
+                class="form_text area"
+                required
+              ></textarea>
+              <label for="text_a_form" class="form_label_3"
+                >NapÃ­Å¡te nÃ¡m nieÄo:</label
+              >
+            </div>
+
+            <div class="formular_div2">
+              <p class="">ObrÃ¡zok</p>
+              <input type="file" id="obrazok" name="obrazok" class="" />
+            </div>
+            <br />
+
+            <div class="formular_div2">
+              <button type="submit">OdoslaÅ¥</button>
+              <button type="reset">Reset</button>
+            </div>
+          </form>
+        </div>
+
+        <hr class="line2" />
+        <p>VaÅ¡e odpovede:</p>
+        <div id="spokojnost_div"></div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <a class="foot_st">KÃ¡va - Robusta</a>
+      <a class="foot_st">4.3.2020</a>
+      <a class="foot_st">Autor textu: wikipedia - KÃ¡vovnÃ­k arabskÃ½</a>
+      <a class="foot_st"
+        >Autor strÃ¡nky: Michal StaroÅ - michals9009@gmail.com</a
+      >
+    </div>
+
+    <!--  Mustache template -->
+    <script id="spokojnost_odoslane" type="text/template">
+      <section>
+          <h3>{{Meno}} {{Priezvisko}}</h3>
+          <i>{{Email}}</i>
+          <p>Pohlavie:{{Pohlavie}}</p>
+          <p>OblÃºbenÃ¡ kÃ¡va: {{Oblubena_kava}}</p>
+          <p>DodatoÄnÃ¡ sprÃ¡va:{{SprÃ¡va}}</p>
+          <hr class="line2">
+      </section>
+    </script>
+
+    <!--file-->
+    <script src="form_spokojnost.js"></script>
+  </body>
+</html>
