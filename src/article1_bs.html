@@ -1,411 +1,533 @@
 <!DOCTYPE html>
 <html lang="sk">
-<head>
-  <!-- Theme Made By www.w3schools.com - No Copyright -->
-  <title>Bootstrap Theme The Band</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  <style>
-  body {
-    font: 400 15px/1.8 Lato, sans-serif;
-    color: #777;
-  }
-  h3, h4 {
-    margin: 10px 0 30px 0;
-    letter-spacing: 10px;      
-    font-size: 20px;
-    color: #111;
-  }
-  .container {
-    padding: 80px 120px;
-  }
-  .person {
-    border: 10px solid transparent;
-    margin-bottom: 25px;
-    width: 80%;
-    height: 80%;
-  }
-  .person:hover {
-    border-color: #a2c523;
-    opacity: 0.8
-  }
-  .carousel-inner img {
-    -webkit-filter: grayscale(0%);
-    filter: grayscale(0%); /* make all photos black and white */ 
-    width: 100%; /* Set width to 100% */
-    margin: auto;
-  }
-  .carousel-caption h3 {
-    color: #fff !important;
-  }
-  @media (max-width: 600px) {
-    .carousel-caption {
-      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
-    }
-  }
-  .bg-1 {
-    background: #7d4427;
-    color: #bdbdbd;
-  }
-  .bg-1 h3 {color: #fff;}
-  .bg-1 p {font-style: italic;}
-  .list-group-item:first-child {
-    border-top-right-radius: 0;
-    border-top-left-radius: 0;
-  }
-  .list-group-item:last-child {
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-  .thumbnail {
-    padding: 0 0 15px 0;
-    border: none;
-    border-radius: 0;
-  }
-  .thumbnail p {
-    margin-top: 15px;
-    color: #555;
-  }
-  .btn {
-    padding: 10px 20px;
-    background-color: #333;
-    color: #f1f1f1;
-    border-radius: 0;
-    transition: .2s;
-  }
-  .btn:hover, .btn:focus {
-    border: 1px solid #333;
-    background-color: #fff;
-    color: #000;
-  }
-  .modal-header, h4, .close {
-    background-color: #333;
-    color: #fff !important;
-    text-align: center;
-    font-size: 30px;
-  }
-  .modal-header, .modal-body {
-    padding: 40px 50px;
-  }
-  .nav-tabs li a {
-    color: #777;
-  }
-  #googleMap {
-    width: 100%;
-    height: 400px;
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-  }  
-  .navbar {
-    font-family: Montserrat, sans-serif;
-    margin-bottom: 0;
-    background-color: #a2c523;
-    border: 0;
-    font-size: 11px !important;
-    letter-spacing: 4px;
-    opacity: 0.9;
-  }
-  .navbar li a, .navbar .navbar-brand { 
-    color: #7d4427 !important;
-    font-weight: bold;
-  }
-  .navbar-nav li a:hover {
-    color: #fff !important;
-  }
-  .navbar-nav li.active a {
-    color: #fff !important;
-    background-color: rgb(72, 107, 0) !important;
-  }
-  .navbar-default .navbar-toggle {
-    border-color: transparent;
-  }
-  .open .dropdown-toggle {
-    color: #fff;
-    background-color: #555 !important;
-  }
-  .dropdown-menu li a {
-    color: #000 !important;
-  }
-  .dropdown-menu li a:hover {
-    background-color: red !important;
-  }
-  footer {
-    background-color: #7d4427;
-    color: #f5f5f5;
-    padding: 32px;
-  }
-  footer a {
-    color: #f5f5f5;
-  }
-  footer a:hover {
-    color: #777;
-    text-decoration: none;
-  }  
-  .form-control {
-    border-radius: 0;
-  }
-  textarea {
-    resize: none;
-  }
-  .tab_hl_rastlina{
-    width: 100%;
-  }
-  .tab_tr_rastlina{
-  }
-  .tab_td_rastlina{
-    width: 50%;
-    border-bottom: solid 2px #a2c523;
-    color: #7d4427;
-  }
-  </style>
-</head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
-
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="articles_index.html">coffee</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#myPage">ARABIKA</a></li>
-        <li><a href="#band">ZÃ¡kladnÃ© informÃ¡cie</a></li>
-        <li><a href="#tour">ObrÃ¡zky</a></li>
-        <li><a href="#contact">PodrobnejÅ¡ie informÃ¡cie</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
-      <div class="item active">
-        <img src="img/img_bs/img1.jpg" alt="New York" width="1200" height="700">
-        <div class="carousel-caption">
-
-        </div>      
-      </div>
-
-      <div class="item">
-        <img src="img/img_bs/img2.jpg" alt="Chicago" width="1200" height="700">
-        <div class="carousel-caption">
-
-        </div>      
-      </div>
-    
-      <div class="item">
-        <img src="img/img_bs/img4.jpg" alt="Los Angeles" width="1200" height="700">
-        <div class="carousel-caption">
-
-        </div>      
-      </div>
-    </div>
-
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-</div>
-
-<!-- Container (The Band Section) -->
-<div id="band" class="container text-center">
-  <h3>Arabika</h3>
-          <p>KÃ¡vovnÃ­k arabskÃ½ (Coffea arabica) je rastlina z ÄeÄ¾ade marenovitÃ© (Rubiaceae). PochÃ¡dza z horskÃ½ch oblastÃ­ EtiÃ³pie a dorastÃ¡ do vÃ½Å¡ky 5-6 m, v kultÃºre 2-3 m. Je to vÅ¾dyzelenÃ½ ker s eliptickÃ½mi tuhÅ¡Ã­mi listami dosahujÃºce aÅ¾ 15 cm dÄºÅ¾ky. Listy bÃ½vajÃº zvlnenÃ©, poloÅ¾enÃ© Ãºstretovo na stonkÃ¡ch. NiekoÄ¾ko poÄetnÃ© kvety vyrastajÃº vo zvÃ¤zoÄkoch v ÃºÅ¾Ä¾abÃ­ listov, korunnÃ© plÃ¡tky sÃº biele.</p>
-        <p>Plodom je 1,5 cm veÄ¾kÃ¡ kÃ´stkovica, najprv zelenej farby, v priebehu sa farba menÃ­ cez Å¾ltÃº, ÄervenÃº Äi fialovÃº. VnÃºtri plodov sa nachÃ¡dzajÃº 1-2 semenÃ¡ s pozdÄºÅ¾nou ryhou. Tie obsahujÃº znaÄnÃ© mnoÅ¾stvo bielkovÃ­n, lipidov, sacharidov a 0,5-1,7% kofeÃ­nu. Preto sa dnes kÃ¡vovnÃ­k tieÅ¾ pestuje po celom svete v trÃ³poch a subtrÃ³poch ako pochutina. V poslednej dobe sa objavuje i v agrolesnÃ­ckych sÃºstavÃ¡ch, pretoÅ¾e znÃ¡Å¡a do urÄitej miery zatienenie a sÃ¡m poskytuje tieÅ inÃ½m plodinÃ¡m, najÄastejÅ¡ie zeleninÃ¡m. KÃ¡vovnÃ­k arabskÃ½ je dnes najrozÅ¡Ã­renejÅ¡Ã­m kÃ¡vovnÃ­kom pestovanÃ½m na vÃ½robu kÃ¡vy.</p>
-        <p>Druh sa delÃ­ na dve variety: C. arabica var. typica a C. arabica var. Bourbon, ktorÃ© sa navzÃ¡jom krÃ­Å¾ia. NajznÃ¡mejÅ¡Ã­mi kultivarmi sÃº: 'Blue Mountain', 'San Ramon', 'Maragogipe', 'French Mission', 'Kent', 'Cattura' Äi 'Mundo Novo'. Taxonomicky spadÃ¡ Coffea arabica do sekcie Eucoffea, podsekcie Erythrocoffea.</p>
-  <br>
-  <div class="row">
-    <div class="col-sm-4">
-      <a href="#demo" data-toggle="collapse">
-        <img src="img/img_bs/a1.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
-      </a>
-      <div id="demo" class="collapse">
-        <p>KÃ¡vu milujÃº na celom svete</p>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <a href="#demo2" data-toggle="collapse">
-        <img src="img/img_bs/a2.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
-      </a>
-      <div id="demo2" class="collapse">
-        <p>DovÃ¡Å¾a sa vÅ¡ade</p>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <a href="#demo3" data-toggle="collapse">
-        <img src="img/img_bs/a3.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
-      </a>
-      <div id="demo3" class="collapse">
-        <p>Nie kaÅ¾dÃ½ vie, ako vyzerajÃº plody</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Container (TOUR Section) -->
-<div id="tour" class="bg-1">
-  <div class="container">
-   
-    <div class="row text-center">
-      <div class="col-sm-4">
-        <div class="thumbnail">
-          <img src="img/img_bs/img5.jpg" alt="Paris" width="400" height="300">
-          <p><strong>Mletie</strong></p>
-
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="thumbnail">
-          <img src="img/img_bs/img6.jpg" alt="New York" width="400" height="300">
-          <p><strong>Zalievanie</strong></p>
-
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="thumbnail">
-          <img src="img/img_bs/img7.jpg" alt="San Francisco" width="400" height="300">
-          <p><strong>Oddych</strong></p>
-
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">Ã</button>
-          <h4><span class="glyphicon glyphicon-lock"></span> Tickets</h4>
-        </div>
-        <div class="modal-body">
-          <form id="form_bs">
-            <div class="form-group">
-              <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span> Tickets, $23 per person</label>
-              <input type="number" class="form-control" id="psw" placeholder="How many?">
-            </div>
-            <div class="form-group">
-              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Send To</label>
-              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
-            </div>
-              <button type="submit" class="btn btn-block">Pay 
-                <span class="glyphicon glyphicon-ok"></span>
-              </button>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
-            <span class="glyphicon glyphicon-remove"></span> Cancel
+  <head>
+    <!-- Theme Made By www.w3schools.com - No Copyright -->
+    <title>Bootstrap Theme The Band</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <style>
+      body {
+        font: 400 15px/1.8 Lato, sans-serif;
+        color: #777;
+      }
+      h3,
+      h4 {
+        margin: 10px 0 30px 0;
+        letter-spacing: 10px;
+        font-size: 20px;
+        color: #111;
+      }
+      .container {
+        padding: 80px 120px;
+      }
+      .person {
+        border: 10px solid transparent;
+        margin-bottom: 25px;
+        width: 80%;
+        height: 80%;
+      }
+      .person:hover {
+        border-color: #a2c523;
+        opacity: 0.8;
+      }
+      .carousel-inner img {
+        -webkit-filter: grayscale(0%);
+        filter: grayscale(0%); /* make all photos black and white */
+        width: 100%; /* Set width to 100% */
+        margin: auto;
+      }
+      .carousel-caption h3 {
+        color: #fff !important;
+      }
+      @media (max-width: 600px) {
+        .carousel-caption {
+          display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+        }
+      }
+      .bg-1 {
+        background: #7d4427;
+        color: #bdbdbd;
+      }
+      .bg-1 h3 {
+        color: #fff;
+      }
+      .bg-1 p {
+        font-style: italic;
+      }
+      .list-group-item:first-child {
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+      }
+      .list-group-item:last-child {
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+      .thumbnail {
+        padding: 0 0 15px 0;
+        border: none;
+        border-radius: 0;
+      }
+      .thumbnail p {
+        margin-top: 15px;
+        color: #555;
+      }
+      .btn {
+        padding: 10px 20px;
+        background-color: #333;
+        color: #f1f1f1;
+        border-radius: 0;
+        transition: 0.2s;
+      }
+      .btn:hover,
+      .btn:focus {
+        border: 1px solid #333;
+        background-color: #fff;
+        color: #000;
+      }
+      .modal-header,
+      h4,
+      .close {
+        background-color: #333;
+        color: #fff !important;
+        text-align: center;
+        font-size: 30px;
+      }
+      .modal-header,
+      .modal-body {
+        padding: 40px 50px;
+      }
+      .nav-tabs li a {
+        color: #777;
+      }
+      #googleMap {
+        width: 100%;
+        height: 400px;
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+      }
+      .navbar {
+        font-family: Montserrat, sans-serif;
+        margin-bottom: 0;
+        background-color: #a2c523;
+        border: 0;
+        font-size: 11px !important;
+        letter-spacing: 4px;
+        opacity: 0.9;
+      }
+      .navbar li a,
+      .navbar .navbar-brand {
+        color: #7d4427 !important;
+        font-weight: bold;
+      }
+      .navbar-nav li a:hover {
+        color: #fff !important;
+      }
+      .navbar-nav li.active a {
+        color: #fff !important;
+        background-color: rgb(72, 107, 0) !important;
+      }
+      .navbar-default .navbar-toggle {
+        border-color: transparent;
+      }
+      .open .dropdown-toggle {
+        color: #fff;
+        background-color: #555 !important;
+      }
+      .dropdown-menu li a {
+        color: #000 !important;
+      }
+      .dropdown-menu li a:hover {
+        background-color: red !important;
+      }
+      footer {
+        background-color: #7d4427;
+        color: #f5f5f5;
+        padding: 32px;
+      }
+      footer a {
+        color: #f5f5f5;
+      }
+      footer a:hover {
+        color: #777;
+        text-decoration: none;
+      }
+      .form-control {
+        border-radius: 0;
+      }
+      textarea {
+        resize: none;
+      }
+      .tab_hl_rastlina {
+        width: 100%;
+      }
+      .tab_tr_rastlina {
+      }
+      .tab_td_rastlina {
+        width: 50%;
+        border-bottom: solid 2px #a2c523;
+        color: #7d4427;
+      }
+    </style>
+  </head>
+  <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target="#myNavbar"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
           </button>
-          <p>Need <a href="#">help?</a></p>
+          <a class="navbar-brand" href="../index.html">coffee</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#myPage">ARABIKA</a></li>
+            <li><a href="#band">ZÃ¡kladnÃ© informÃ¡cie</a></li>
+            <li><a href="#tour">ObrÃ¡zky</a></li>
+            <li><a href="#contact">PodrobnejÅ¡ie informÃ¡cie</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img
+            src="img/img_bs/img1.jpg"
+            alt="New York"
+            width="1200"
+            height="700"
+          />
+          <div class="carousel-caption"></div>
+        </div>
+
+        <div class="item">
+          <img
+            src="img/img_bs/img2.jpg"
+            alt="Chicago"
+            width="1200"
+            height="700"
+          />
+          <div class="carousel-caption"></div>
+        </div>
+
+        <div class="item">
+          <img
+            src="img/img_bs/img4.jpg"
+            alt="Los Angeles"
+            width="1200"
+            height="700"
+          />
+          <div class="carousel-caption"></div>
+        </div>
+      </div>
+
+      <!-- Left and right controls -->
+      <a
+        class="left carousel-control"
+        href="#myCarousel"
+        role="button"
+        data-slide="prev"
+      >
+        <span
+          class="glyphicon glyphicon-chevron-left"
+          aria-hidden="true"
+        ></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a
+        class="right carousel-control"
+        href="#myCarousel"
+        role="button"
+        data-slide="next"
+      >
+        <span
+          class="glyphicon glyphicon-chevron-right"
+          aria-hidden="true"
+        ></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+    <!-- Container (The Band Section) -->
+    <div id="band" class="container text-center">
+      <h3>Arabika</h3>
+      <p>
+        KÃ¡vovnÃ­k arabskÃ½ (Coffea arabica) je rastlina z ÄeÄ¾ade marenovitÃ©
+        (Rubiaceae). PochÃ¡dza z horskÃ½ch oblastÃ­ EtiÃ³pie a dorastÃ¡ do
+        vÃ½Å¡ky 5-6 m, v kultÃºre 2-3 m. Je to vÅ¾dyzelenÃ½ ker s eliptickÃ½mi
+        tuhÅ¡Ã­mi listami dosahujÃºce aÅ¾ 15 cm dÄºÅ¾ky. Listy bÃ½vajÃº
+        zvlnenÃ©, poloÅ¾enÃ© Ãºstretovo na stonkÃ¡ch. NiekoÄ¾ko poÄetnÃ© kvety
+        vyrastajÃº vo zvÃ¤zoÄkoch v ÃºÅ¾Ä¾abÃ­ listov, korunnÃ© plÃ¡tky sÃº
+        biele.
+      </p>
+      <p>
+        Plodom je 1,5 cm veÄ¾kÃ¡ kÃ´stkovica, najprv zelenej farby, v priebehu
+        sa farba menÃ­ cez Å¾ltÃº, ÄervenÃº Äi fialovÃº. VnÃºtri plodov sa
+        nachÃ¡dzajÃº 1-2 semenÃ¡ s pozdÄºÅ¾nou ryhou. Tie obsahujÃº znaÄnÃ©
+        mnoÅ¾stvo bielkovÃ­n, lipidov, sacharidov a 0,5-1,7% kofeÃ­nu. Preto sa
+        dnes kÃ¡vovnÃ­k tieÅ¾ pestuje po celom svete v trÃ³poch a subtrÃ³poch
+        ako pochutina. V poslednej dobe sa objavuje i v agrolesnÃ­ckych
+        sÃºstavÃ¡ch, pretoÅ¾e znÃ¡Å¡a do urÄitej miery zatienenie a sÃ¡m
+        poskytuje tieÅ inÃ½m plodinÃ¡m, najÄastejÅ¡ie zeleninÃ¡m. KÃ¡vovnÃ­k
+        arabskÃ½ je dnes najrozÅ¡Ã­renejÅ¡Ã­m kÃ¡vovnÃ­kom pestovanÃ½m na
+        vÃ½robu kÃ¡vy.
+      </p>
+      <p>
+        Druh sa delÃ­ na dve variety: C. arabica var. typica a C. arabica var.
+        Bourbon, ktorÃ© sa navzÃ¡jom krÃ­Å¾ia. NajznÃ¡mejÅ¡Ã­mi kultivarmi sÃº:
+        'Blue Mountain', 'San Ramon', 'Maragogipe', 'French Mission', 'Kent',
+        'Cattura' Äi 'Mundo Novo'. Taxonomicky spadÃ¡ Coffea arabica do sekcie
+        Eucoffea, podsekcie Erythrocoffea.
+      </p>
+      <br />
+      <div class="row">
+        <div class="col-sm-4">
+          <a href="#demo" data-toggle="collapse">
+            <img
+              src="img/img_bs/a1.jpg"
+              class="img-circle person"
+              alt="Random Name"
+              width="255"
+              height="255"
+            />
+          </a>
+          <div id="demo" class="collapse">
+            <p>KÃ¡vu milujÃº na celom svete</p>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <a href="#demo2" data-toggle="collapse">
+            <img
+              src="img/img_bs/a2.jpg"
+              class="img-circle person"
+              alt="Random Name"
+              width="255"
+              height="255"
+            />
+          </a>
+          <div id="demo2" class="collapse">
+            <p>DovÃ¡Å¾a sa vÅ¡ade</p>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <a href="#demo3" data-toggle="collapse">
+            <img
+              src="img/img_bs/a3.jpg"
+              class="img-circle person"
+              alt="Random Name"
+              width="255"
+              height="255"
+            />
+          </a>
+          <div id="demo3" class="collapse">
+            <p>Nie kaÅ¾dÃ½ vie, ako vyzerajÃº plody</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
 
-<!-- Container (Contact Section) -->
-<div id="contact" class="container">
-  <h3 class="text-center">Podrobnosti</h3>
+    <!-- Container (TOUR Section) -->
+    <div id="tour" class="bg-1">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <img
+                src="img/img_bs/img5.jpg"
+                alt="Paris"
+                width="400"
+                height="300"
+              />
+              <p><strong>Mletie</strong></p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <img
+                src="img/img_bs/img6.jpg"
+                alt="New York"
+                width="400"
+                height="300"
+              />
+              <p><strong>Zalievanie</strong></p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <img
+                src="img/img_bs/img7.jpg"
+                alt="San Francisco"
+                width="400"
+                height="300"
+              />
+              <p><strong>Oddych</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-  <div class="row">
-    <table class="tab_hl_rastlina">
-            <tr class="tab_tr_rastlina">
-              <td class="tab_td_rastlina">RÃ­Å¡a a pod rÃ­Å¡a</td>
-              <td class="tab_td_rastlina">Rastliny - Cievnate rastliny</td>
-            </tr>
-            <tr class="tab_tr_rastlina">
-              <td class="tab_td_rastlina">Oddelenie</td>
-              <td class="tab_td_rastlina">KrytosemennÃ© rastliny</td>
-            </tr>
-            <tr class="tab_tr_rastlina">
-              <td class="tab_td_rastlina">Trieda</td>
-              <td class="tab_td_rastlina">PrÃ¡ve dvojklÃ­ÄkovÃ© rastliny</td>
-            </tr>
-            <tr class="tab_tr_rastlina">
-              <td class="tab_td_rastlina">Rad</td>
-              <td class="tab_td_rastlina">HorÄovitÃ© (Gentianaceae)</td>
-            </tr>
-            <tr class="tab_tr_rastlina">
-              <td class="tab_td_rastlina">ÄelaÄ</td>
-              <td class="tab_td_rastlina">Rubiaceae</td>
-            </tr>
-            <tr class="tab_tr_rastlina">
-              <td class="tab_td_rastlina">Rod</td>
-              <td class="tab_td_rastlina">KÃ¡vovnÃ­k</td>
-            </tr>
-          </table>
-  </div>
-  <br>
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">
+                Ã
+              </button>
+              <h4><span class="glyphicon glyphicon-lock"></span> Tickets</h4>
+            </div>
+            <div class="modal-body">
+              <form id="form_bs">
+                <div class="form-group">
+                  <label for="psw"
+                    ><span class="glyphicon glyphicon-shopping-cart"></span>
+                    Tickets, $23 per person</label
+                  >
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="psw"
+                    placeholder="How many?"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="usrname"
+                    ><span class="glyphicon glyphicon-user"></span> Send
+                    To</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="usrname"
+                    placeholder="Enter email"
+                  />
+                </div>
+                <button type="submit" class="btn btn-block">
+                  Pay
+                  <span class="glyphicon glyphicon-ok"></span>
+                </button>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="submit"
+                class="btn btn-danger btn-default pull-left"
+                data-dismiss="modal"
+              >
+                <span class="glyphicon glyphicon-remove"></span> Cancel
+              </button>
+              <p>Need <a href="#">help?</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-</div>
+    <!-- Container (Contact Section) -->
+    <div id="contact" class="container">
+      <h3 class="text-center">Podrobnosti</h3>
 
-<!-- Image of location/map -->
-<img src="map.jpg" alt="" class="img-responsive" style="width:100%">
+      <div class="row">
+        <table class="tab_hl_rastlina">
+          <tr class="tab_tr_rastlina">
+            <td class="tab_td_rastlina">RÃ­Å¡a a pod rÃ­Å¡a</td>
+            <td class="tab_td_rastlina">Rastliny - Cievnate rastliny</td>
+          </tr>
+          <tr class="tab_tr_rastlina">
+            <td class="tab_td_rastlina">Oddelenie</td>
+            <td class="tab_td_rastlina">KrytosemennÃ© rastliny</td>
+          </tr>
+          <tr class="tab_tr_rastlina">
+            <td class="tab_td_rastlina">Trieda</td>
+            <td class="tab_td_rastlina">PrÃ¡ve dvojklÃ­ÄkovÃ© rastliny</td>
+          </tr>
+          <tr class="tab_tr_rastlina">
+            <td class="tab_td_rastlina">Rad</td>
+            <td class="tab_td_rastlina">HorÄovitÃ© (Gentianaceae)</td>
+          </tr>
+          <tr class="tab_tr_rastlina">
+            <td class="tab_td_rastlina">ÄelaÄ</td>
+            <td class="tab_td_rastlina">Rubiaceae</td>
+          </tr>
+          <tr class="tab_tr_rastlina">
+            <td class="tab_td_rastlina">Rod</td>
+            <td class="tab_td_rastlina">KÃ¡vovnÃ­k</td>
+          </tr>
+        </table>
+      </div>
+      <br />
+    </div>
 
-<!-- Footer -->
-<footer class="text-center">
-  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="SPÃÅ¤">
-    <span class="glyphicon glyphicon-chevron-up"></span>
-  </a><br><br>
-</footer>
+    <!-- Footer -->
+    <footer class="text-center">
+      <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="SPÃÅ¤">
+        <span class="glyphicon glyphicon-chevron-up"></span> </a
+      ><br /><br />
+    </footer>
 
-<script>
-$(document).ready(function(){
-  // Initialize Tooltip
-  $('[data-toggle="tooltip"]').tooltip(); 
-  
-  // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    <script>
+      $(document).ready(function() {
+        // Initialize Tooltip
+        $('[data-toggle="tooltip"]').tooltip();
 
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
+        // Add smooth scrolling to all links in navbar + footer link
+        $(".navbar a, footer a[href='#myPage']").on("click", function(event) {
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
 
-      // Prevent default anchor click behavior
-      event.preventDefault();
+            // Store hash
+            var hash = this.hash;
 
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 900, function(){
-   
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top
+              },
+              900,
+              function() {
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              }
+            );
+          } // End if
+        });
       });
-    } // End if
-  });
-})
-</script>
-
-</body>
+    </script>
+  </body>
 </html>

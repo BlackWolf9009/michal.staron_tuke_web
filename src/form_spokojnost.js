@@ -1,116 +1,116 @@
-    
 import { render } from "mustache";
 
+function opinion2html(opinion) {
+  //in the case of Mustache, we must prepare data beforehand:
+  opinion.createdDate = new Date(opinion.created).toDateString();
 
-function opinion2html(opinion){
+  //get the template:
+  const template = document.getElementById("spokojnost_odoslane").innerHTML;
+  //use the Mustache:
+  const htmlWOp = render(template, opinion);
 
-    //in the case of Mustache, we must prepare data beforehand:
-    opinion.createdDate=(new Date(opinion.created)).toDateString();
+  //delete the createdDate item as we created it only for the template rendering:
+  delete opinion.createdDate;
 
-    //get the template:
-    const template = document.getElementById("spokojnost_odoslane").innerHTML;
-    //use the Mustache:
-    const htmlWOp = render(template,opinion);
-
-    //delete the createdDate item as we created it only for the template rendering:
-    delete(opinion.createdDate);
-
-    //return the rendered HTML:
-    return htmlWOp;
-
+  //return the rendered HTML:
+  return htmlWOp;
 }
 
-
-function opinionArray2html(sourceData){
-    return sourceData.reduce((htmlWithOpinions,opn) => htmlWithOpinions+ opinion2html(opn),"");  
-    /* "" is the initial value of htmlWithOpinions in reduce. 
+function opinionArray2html(sourceData) {
+  return sourceData.reduce(
+    (htmlWithOpinions, opn) => htmlWithOpinions + opinion2html(opn),
+    ""
+  );
+  /* "" is the initial value of htmlWithOpinions in reduce. 
     If we do not use it, the first member of sourceData will 
     not be processed correctly */
 }
 
+let opinions = [];
+const opinionsElm = document.getElementById("spokojnost_div");
+if (localStorage.coffee_web) {
+  opinions = JSON.parse(localStorage.coffee_web);
+}
 
-    let opinions=[];
-    const opinionsElm=document.getElementById("spokojnost_div");
-    if(localStorage.coffee_web){
-        opinions=JSON.parse(localStorage.coffee_web);
-    }
+console.log(opinions);
+opinionsElm.innerHTML = opinionArray2html(opinions);
 
-    console.log(opinions);
-    opinionsElm.innerHTML=opinionArray2html(opinions);
+const commFrmElm = document.getElementById("spokojnost");
+commFrmElm.addEventListener("submit", processOpnFrmData);
 
+function processOpnFrmData(event) {
+  event.preventDefault();
 
-    const commFrmElm=document.getElementById("spokojnost");
-    commFrmElm.addEventListener("submit",processOpnFrmData);
+  const meno_spo = document.getElementById("meno").value.trim();
+  const priezvisko_spo = document.getElementById("priezvisko").value.trim();
+  const email_spo = document.getElementById("email").value.trim();
 
-    function processOpnFrmData(event){
-        event.preventDefault();
+  const muz_spo = document.getElementById("muz").checked;
+  const zena_spo = document.getElementById("zena").checked;
 
-        const meno_spo = document.getElementById("meno").value.trim();
-        const priezvisko_spo = document.getElementById("priezvisko").value.trim();
-        const email_spo = document.getElementById("email").value.trim();
+  const arabika_spo = document.getElementById("arabika").checked;
+  const robusta_spo = document.getElementById("robusta").checked;
+  const ine_spo = document.getElementById("ine").checked;
 
-        const muz_spo = document.getElementById("muz").checked;
-        const zena_spo = document.getElementById("zena").checked;
+  const text_a_form_spo = document.getElementById("text_a_form").value.trim();
 
-        const arabika_spo = document.getElementById("arabika").checked;
-        const robusta_spo = document.getElementById("robusta").checked;
-        const ine_spo = document.getElementById("ine").checked;
+  if (
+    meno_spo === "" ||
+    priezvisko_spo === "" ||
+    email_spo === "" ||
+    text_a_form_spo === ""
+  ) {
+    window.alert("ProsÃ­m, vyplÅ vÅ¡etky polia.");
+    return;
+  }
 
-        const text_a_form_spo = document.getElementById("text_a_form").value.trim();
+  var aaa;
+  if (arabika_spo === true || robusta_spo === true || ine_spo === true) {
+    aaa = 1;
+  }
 
+  var poh;
+  if (muz_spo === true) {
+    poh = "MuÅ¾";
+  } else if (zena_spo === true) {
+    poh = "Å½ena";
+  }
 
-        if(meno_spo=="" || priezvisko_spo=="" || 
-            email_spo=="" || text_a_form_spo==""){
-            window.alert("ProsÃ­m, vyplÅ vÅ¡etky polia.");
-            return;
-        }
+  var kava;
+  if (document.getElementById("arabika").checked === true && aaa === 1) {
+    kava = "Arabika";
+  }
+  if (document.getElementById("robusta").checked === true) {
+    kava = kava + " Robusta";
+  }
+  if (document.getElementById("ine").checked === true) {
+    kava = kava + " Ine";
+  }
 
-        var poh;
-        if (muz_spo==true) {
-            poh="MuÅ¾"; 
-        }
-        else{
-            poh="Å½ena"
-        }
+  const newOpinion = {
+    Meno: meno_spo,
+    Priezvisko: priezvisko_spo,
+    Email: email_spo,
+    Pohlavie: poh,
+    Oblubena_kava: kava,
+    Sprava: text_a_form_spo,
+    Vytvorene: new Date()
+  };
 
-        var kava;
-        if(document.getElementById("arabika").checked == true){
-            kava="Arabika";
-        }
-        if(document.getElementById("robusta").checked == true){
-            kava=kava + " " + "Robusta";
-        }
-        if(document.getElementById("ine").checked == true){
-            kava=kava + " " + "Ine";
-        }
+  console.log("New opinion:\n " + JSON.stringify(newOpinion));
 
+  opinions.push(newOpinion);
 
-        const newOpinion =
-            {
-                Meno: meno_spo,
-                Priezvisko: priezvisko_spo,
-                Email: email_spo,
-                Pohlavie: poh,
-                Oblubena_kava: kava,
-                SprÃ¡va: text_a_form_spo,
-                VytvorenÃ©: new Date()
-            };
+  localStorage.coffee_web = JSON.stringify(opinions);
 
-        console.log("New opinion:\n "+JSON.stringify(newOpinion));
+  //4. Update HTML
+  opinionsElm.innerHTML += opinion2html(newOpinion);
 
-        opinions.push(newOpinion);
+  //4. Notify the user
+  /*   window.alert("FormulÃ¡r odoslanÃ½");*/
+  console.log("New opinion added");
+  console.log(opinions);
 
-        localStorage.coffee_web = JSON.stringify(opinions);
-
-    //4. Update HTML
-        opinionsElm.innerHTML+=opinion2html(newOpinion);
-
-        //4. Notify the user 
-     /*   window.alert("FormulÃ¡r odoslanÃ½");*/
-        console.log("New opinion added");
-        console.log(opinions);
-
-
-        //5. Reset the form
-        commFrmElm.reset();
-    }
+  //5. Reset the form
+  commFrmElm.reset();
+}
